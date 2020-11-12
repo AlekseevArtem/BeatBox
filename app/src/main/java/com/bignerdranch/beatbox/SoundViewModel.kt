@@ -13,4 +13,5 @@ class SoundViewModel(beatBox: BeatBox) : BaseObservable() {
     val title: String
         @Bindable get() = sound?.title ?: "No file"
 
+    fun onButtonClicked() = sound?.let { beatBox.play(it) }
 }
